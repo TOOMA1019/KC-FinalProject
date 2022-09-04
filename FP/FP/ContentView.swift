@@ -17,13 +17,15 @@ struct ContentView: View {
                Spacer()
                 Text("WELCOME\n TO YOUR BOOK")
                     .font(.title)
-                    .padding()
+                    .padding(.leading,80)
                 Spacer()
+                Spacer()
+                    
             NavigationLink(destination:SecondView()){ Text("START")
                     .font(.title)
                     .foregroundColor(.black)
                     .padding()
-                    .background(.brown.opacity(0.2))
+                    .background(Color(#colorLiteral(red: 0.937672317, green: 0.9128866792, blue: 0.8440495133, alpha: 1)))
                     .cornerRadius(20)
                
                 
