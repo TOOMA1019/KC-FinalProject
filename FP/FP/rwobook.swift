@@ -13,8 +13,10 @@ struct rwobook: View {
         VStack{
             Image(book.bookname)
                  .resizable()
-                 .frame(width: 100, height: 100)
+                 .frame(width: 80, height: 80)
             Text(book.bookname)
+                .frame(width: 80, height: 80)
+            
 }
 }
 }

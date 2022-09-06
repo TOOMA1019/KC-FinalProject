@@ -14,17 +14,22 @@ struct DetailsView: View {
             Image(book.bookname)
                 .resizable()
                 .frame(width: 300, height: 350)
+               
             Text(book.bookname)
                 .font(.title)
-            Text( book.authorname)
+            Text(" المؤلف : \(book.authorname)")
+                .font(.title3)
             Text(book.description)
+                .font(.title3)
             Text("عدد الصفحات : \(book.sheetsnum)")
+                .font(.title3)
+          
         }
     }
 }
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(book: Book(bookname: "ابابيل", description:"روايه خيالسه تحكي عن فتي", authorname: "احمد ال حمدان", sheetsnum: 350))
+        DetailsView(book: Book(bookname: "ابابيل", description:"روايه خياليه تحكي عن فتي", authorname: "احمد ال حمدان", sheetsnum: 350))
     }
 }
