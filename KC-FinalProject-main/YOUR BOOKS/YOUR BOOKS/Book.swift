@@ -12,6 +12,6 @@ struct Book: Identifiable{
     let description : String
     let authorname : String
     let  sheetsnum : Int
-    
+    let evaluation : [String]
 }
 

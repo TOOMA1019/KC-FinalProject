@@ -17,19 +17,32 @@ struct DetailsView: View {
                
             Text(book.bookname)
                 .font(.title)
-            Text(" المؤلف : \(book.authorname)")
+            Text("Writer : \(book.authorname)")
                 .font(.title3)
             Text(book.description)
+                .font(.body)
+                .padding()
+            Text("Pages : \(book.sheetsnum)")
                 .font(.title3)
-            Text("عدد الصفحات : \(book.sheetsnum)")
-                .font(.title3)
-          
+            HStack{
+                
+                
+                ForEach(book.evaluation,id:\.self){ i in
+               
+            Image("\(i)")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height:50 )
+                }
+            }
+                
         }
+            
     }
 }
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(book: Book(bookname: "ابابيل", description:"روايه خياليه تحكي عن فتي", authorname: "احمد ال حمدان", sheetsnum: 350))
+        DetailsView(book: Book(bookname: "ابابيل", description:"روايه خياليه تحكي عن فتي", authorname: "احمد ال حمدان", sheetsnum: 350,  evaluation:["star.fill","star.fill","star.fill","star.fill","star.leadinghalf.filled","empty.fill"]  ))
     }
 }

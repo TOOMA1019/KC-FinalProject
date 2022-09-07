@@ -22,6 +22,6 @@ struct rwobook: View {
 }
 struct rwobook_Previews: PreviewProvider {
     static var previews: some View {
-        rwobook(book: Book(bookname: "بساتين عربستان", description: "", authorname: "اسامة المسلم", sheetsnum: 500))
+        rwobook(book: Book(bookname: "بساتين عربستان", description: "", authorname: "اسامة المسلم", sheetsnum: 500, evaluation: ["star.fill","star.fill","star.fill","star.fill","star.fill"] ))
     }
 }
